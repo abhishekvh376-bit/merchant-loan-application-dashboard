@@ -1,0 +1,14 @@
+{
+  "name": "merchant-loan-application-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test --workspace backend",
+    "test:e2e": "npm run test:e2e --workspace frontend",
+    "install:all": "npm install"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
